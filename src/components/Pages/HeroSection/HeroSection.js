@@ -23,11 +23,13 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <img
-        src={showsCollage}
-        className="w-[700px] rounded-md"
-        alt="TV Shows Collection Collage"
-      />
+      <div className="w-[700px] rounded-md overflow-hidden">
+        <img
+          src={showsCollage}
+          className="hover:scale-110 transition-all duration-500"
+          alt="TV Shows Collection Collage"
+        />
+      </div>
     </div>
   );
 };

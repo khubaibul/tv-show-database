@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Pages/Shows/Layouts/MainLayout";
 import ErrorPage from "../Pages/Shared/ErrorPage";
 import LandingPage from "../Pages/LandingPage/LandingPage";
+import Show from "../Pages/Show/Show";
 
 export const route = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ export const route = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage />,
+      },
+      {
+        path: "/show/:id",
+        element: <Show />,
       },
     ],
   },

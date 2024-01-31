@@ -190,7 +190,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-8 text-xs text-gray-800 font-montserrat italic font-semibold">
-          © 2023 CSE From Home
+          © 2024 TV Series Database
         </p>
       </div>
     </footer>

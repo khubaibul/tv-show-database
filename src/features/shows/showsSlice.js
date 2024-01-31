@@ -11,9 +11,6 @@ export const showsApi = createApi({
       query: () => "",
       providesTags: [],
     }),
-    getShowById: builder.query({
-      query: (id) => `show/${id}`,
-    }),
   }),
 });
 
