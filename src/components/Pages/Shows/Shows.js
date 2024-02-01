@@ -5,14 +5,18 @@ import { FaStar } from "react-icons/fa6";
 import { IoTimerSharp } from "react-icons/io5";
 import { IoLinkSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Loader from "../Shared/Loader";
 
 const Shows = () => {
-  const { data: shows } = useGetShowsQuery();
+  const { data: shows, isLoading, isError } = useGetShowsQuery();
+
+  if (isLoading || isError) {
+    return <Loader />;
+  }
 
   return (
     <div className="w-[80%] mx-auto my-10">
       <h3 className="font-stylish text-4xl text-blue">Trending</h3>
-
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-2">
         {shows?.map((tvShow, i) => (
           <div

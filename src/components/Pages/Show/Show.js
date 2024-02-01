@@ -52,8 +52,8 @@ const Show = () => {
       style={{ backgroundImage: `url(${showFindById?.show?.image?.original})` }}
       className="bg-cover bg-center bg-no-repeat"
     >
-      <div className=" bg-gradient-to-r from-primary to-primary/60 py-20">
-        <div className="grid grid-cols-5 w-[80%] mx-auto p-10">
+      <div className="bg-gradient-to-r from-primary to-primary/60 py-20">
+        <div className="lg:grid md:grid grid-cols-5 w-[80%] mx-auto lg:p-10 md:p-8">
           <img
             src={showFindById?.show?.image?.medium}
             className="col-span-1 rounded w-full hover:scale-105 transition-all duration-300 shadow"
@@ -61,17 +61,17 @@ const Show = () => {
           />
 
           <div className="col-span-4 lg:ml-20 md:ml-10 flex flex-col gap-y-4">
-            <div className="flex flex-col gap-y-2">
-              <div className="flex items-center gap-x-2 font-playFair font-semibold text-4xl tracking-widest">
+            <div className="flex flex-col gap-y-4 gap-x-2">
+              <div className="flex items-center gap-x-2 font-playFair font-semibold lg:text-4xl md:text-3xl text-2xl tracking-widest">
                 <h4>{showFindById?.show?.name}</h4>
                 <span>({showFindById?.show?.premiered?.split("-")[0]})</span>
               </div>
-              <ul className="flex gap-x-8">
-                <li className="flex items-center gap-x-2 font-semibold">
+              <ul className="flex lg:gap-x-8 md:gap-x-6 gap-x-2">
+                <li className="lg:flex md:flex items-center gap-x-2 font-semibold">
                   <SiSemanticrelease className="text-xl" />
                   {showFindById?.show?.premiered}
                 </li>
-                <li className="flex items-center gap-x-2 font-semibold">
+                <li className="lg:flex md:flex items-center gap-x-2 font-semibold">
                   <MdOutlineFilterDrama className="text-xl" />
                   <div>
                     {showFindById?.show?.genres?.[0]}{" "}
@@ -79,7 +79,7 @@ const Show = () => {
                     {showFindById?.show?.genres?.[2]}
                   </div>
                 </li>
-                <li className="flex items-center gap-x-2 font-semibold">
+                <li className="lg:flex md:flex items-center gap-x-2 font-semibold">
                   <MdOutlineAccessTimeFilled className="text-xl" />
                   {showFindById?.show?.averageRuntime} Minutes
                 </li>
